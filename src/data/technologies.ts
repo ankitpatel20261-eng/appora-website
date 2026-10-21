@@ -1,0 +1,28 @@
+import type { TechnologyItem } from '../types'
+
+export const technologies: TechnologyItem[] = [
+  { id: 'python', name: 'Python', category: 'backend' },
+  { id: 'typescript', name: 'TypeScript', category: 'frontend' },
+  { id: 'react', name: 'React', category: 'frontend' },
+  { id: 'nextjs', name: 'Next.js', category: 'frontend' },
+  { id: 'nodejs', name: 'Node.js', category: 'backend' },
+  { id: 'tensorflow', name: 'TensorFlow', category: 'ai' },
+  { id: 'pytorch', name: 'PyTorch', category: 'ai' },
+  { id: 'llm', name: 'LLM Integration', category: 'ai' },
+  { id: 'rag', name: 'RAG Pipelines', category: 'ai' },
+  { id: 'agents', name: 'AI Agents', category: 'ai' },
+  { id: 'opencv', name: 'OpenCV', category: 'ai' },
+  { id: 'ros', name: 'ROS / ROS 2', category: 'ai' },
+  { id: 'postgresql', name: 'PostgreSQL', category: 'data' },
+  { id: 'mongodb', name: 'MongoDB', category: 'data' },
+  { id: 'redis', name: 'Redis', category: 'data' },
+  { id: 'aws', name: 'AWS', category: 'cloud' },
+  { id: 'azure', name: 'Azure', category: 'cloud' },
+  { id: 'gcp', name: 'Google Cloud', category: 'cloud' },
+  { id: 'docker', name: 'Docker', category: 'cloud' },
+  { id: 'kubernetes', name: 'Kubernetes', category: 'cloud' },
+  { id: 'flutter', name: 'Flutter', category: 'frontend' },
+  { id: 'ios', name: 'iOS', category: 'frontend' },
+  { id: 'android', name: 'Android', category: 'frontend' },
+  { id: 'iot', name: 'IoT', category: 'cloud' },
+]

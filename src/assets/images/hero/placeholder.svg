@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none" role="img" aria-label="Hero software visual placeholder">
+  <rect width="800" height="500" fill="#111114"/>
+  <rect x="48" y="48" width="704" height="404" rx="24" fill="#16161a" stroke="#27272a"/>
+  <rect x="80" y="96" width="200" height="16" rx="8" fill="#3f3f46"/>
+  <rect x="80" y="140" width="320" height="12" rx="6" fill="#27272a"/>
+  <rect x="80" y="200" width="160" height="120" rx="16" fill="#1c1917" stroke="#d4a853" stroke-opacity="0.35"/>
+  <rect x="260" y="200" width="160" height="120" rx="16" fill="#16161a" stroke="#27272a"/>
+  <rect x="440" y="200" width="160" height="120" rx="16" fill="#16161a" stroke="#27272a"/>
+  <circle cx="680" cy="120" r="28" fill="#d4a853" fill-opacity="0.2" stroke="#d4a853"/>
+</svg>
