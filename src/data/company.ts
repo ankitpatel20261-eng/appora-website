@@ -10,6 +10,12 @@ export interface ValueItem {
   description: string
 }
 
+export const companyContact = {
+  address: 'Shivalik Shilp, ISKCON Cross Road, Ahmedabad, Gujarat',
+  ceo: 'Ankit Patel',
+  phone: '7043533706',
+}
+
 export const companyAbout = {
   eyebrow: 'About us',
   title: 'Technology that helps your company move forward',
