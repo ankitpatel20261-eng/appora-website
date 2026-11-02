@@ -27,6 +27,8 @@ export interface ServiceItem {
   title: string
   description: string
   href: string
+  image?: { src: string; alt: string }
+  highlights?: string[]
 }
 
 export interface IndustryItem {

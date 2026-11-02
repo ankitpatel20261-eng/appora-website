@@ -1,5 +1,6 @@
 import type { NavItem } from '../types'
 import { services } from './services'
+import { buildingServices } from './buildingServices'
 
 export const companyNavLinks: NavItem[] = [
   { label: 'About Us', href: '/company' },
@@ -7,15 +8,20 @@ export const companyNavLinks: NavItem[] = [
   { label: 'Contact', href: '/contact' },
 ]
 
-export const servicesNavLinks: NavItem[] = services.map((service) => ({
+export const servicesNavLinks: NavItem[] = [...buildingServices.map((service) => ({
+  label: service.title,
+  href: `/services#${service.id}`,
+})), ...services.map((service) => ({
   label: service.title,
   href: service.href,
-}))
+}))]
 
 export const servicesMegaMenu = {
   title: 'Services',
   description: 'Technology-driven solutions, built around your commercial challenges:',
   highlights: [
+    'Building management, fire safety & access control',
+    'CCTV surveillance, audio & video systems',
     'Strategy & consulting',
     'AI, robotics & intelligent automation',
     'Software, cloud & long-term support',

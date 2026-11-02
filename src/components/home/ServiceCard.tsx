@@ -35,7 +35,7 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ service }: ServiceCardProps) {
-  const image = serviceImages[service.id]
+  const image = service.image ?? serviceImages[service.id]
 
   return (
     <Link
@@ -72,8 +72,18 @@ export function ServiceCard({ service }: ServiceCardProps) {
         <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--color-muted)] md:text-base">
           {service.description}
         </p>
+        {service.highlights && (
+          <ul className="mt-5 space-y-2 border-t border-[var(--color-border)] pt-4 text-sm leading-relaxed text-[var(--color-muted-strong)]">
+            {service.highlights.map((highlight) => (
+              <li key={highlight} className="flex gap-2">
+                <span aria-hidden="true" className="text-[var(--color-brand)]">✓</span>
+                {highlight}
+              </li>
+            ))}
+          </ul>
+        )}
         <span className="mt-6 text-sm font-medium text-[var(--color-muted-strong)] transition-colors group-hover:text-[var(--color-text)]">
-          Learn more
+          {service.highlights ? 'Discuss your requirements' : 'Learn more'}
         </span>
       </div>
     </Link>

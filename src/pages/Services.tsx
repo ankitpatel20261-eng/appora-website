@@ -7,6 +7,7 @@ import { Container } from '../components/common/Container'
 import { Section } from '../components/common/Section'
 import { SectionHeading } from '../components/common/SectionHeading'
 import { ServiceCard } from '../components/home/ServiceCard'
+import { BuildingServices } from '../components/home/BuildingServices'
 
 export function Services() {
   const location = useLocation()
@@ -22,19 +23,23 @@ export function Services() {
   return (
     <Section ariaLabelledBy="services-page-heading">
       <Container>
-        <SectionHeading
-          id="services-page-heading"
-          eyebrow={servicesIntro.eyebrow}
-          title={servicesIntro.title}
-          description={servicesIntro.description}
-        />
+        <h1 id="services-page-heading" className="font-display mb-10 text-4xl font-semibold text-[var(--color-text)] md:text-5xl">Our Services</h1>
+        <BuildingServices />
+        <div className="mt-16 border-t border-[var(--color-border)] pt-12">
+          <SectionHeading
+            id="digital-services-heading"
+            eyebrow={servicesIntro.eyebrow}
+            title={servicesIntro.title}
+            description={servicesIntro.description}
+          />
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-          {services.map((service, index) => (
-            <AnimatedElement key={service.id} delay={index * 0.05}>
-              <ServiceCard service={service} />
-            </AnimatedElement>
-          ))}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+            {services.map((service, index) => (
+              <AnimatedElement key={service.id} delay={index * 0.05}>
+                <ServiceCard service={service} />
+              </AnimatedElement>
+            ))}
+          </div>
         </div>
 
         <div className="mt-12 flex flex-col items-start gap-4 rounded-3xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
@@ -43,8 +48,8 @@ export function Services() {
               Ready to solve a real commercial challenge?
             </h2>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-[var(--color-muted)] md:text-base">
-              Tell us the question. We&apos;ll help you choose the right mix of AI, software, cloud,
-              and automation.
+              Tell us what you need. We&apos;ll help you plan the right building systems,
+              digital solutions, and ongoing technical support.
             </p>
           </div>
           <Button href="/contact">Start a project</Button>
