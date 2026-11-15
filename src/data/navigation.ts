@@ -8,13 +8,26 @@ export const companyNavLinks: NavItem[] = [
   { label: 'Contact', href: '/contact' },
 ]
 
-export const servicesNavLinks: NavItem[] = [...buildingServices.map((service) => ({
-  label: service.title,
-  href: `/services#${service.id}`,
-})), ...services.map((service) => ({
-  label: service.title,
-  href: service.href,
-}))]
+export const servicesMenuGroups: { label: string; href: string; links: NavItem[] }[] = [
+  {
+    label: 'IT Services',
+    href: '/services#it-services',
+    links: services.map((service) => ({ label: service.title, href: service.href })),
+  },
+  {
+    label: 'ELV Services',
+    href: '/services#building-systems',
+    links: buildingServices.map((service) => ({
+      label: service.title,
+      href: `/services#${service.id}`,
+    })),
+  },
+]
+
+export const servicesNavLinks: NavItem[] = servicesMenuGroups.flatMap((group) => [
+  { label: group.label, href: group.href },
+  ...group.links,
+])
 
 export const servicesMegaMenu = {
   title: 'Services',
@@ -29,6 +42,7 @@ export const servicesMegaMenu = {
   watermark: 'intelligence in engineering automating opportunities',
   linksLabel: 'What we do',
   links: servicesNavLinks,
+  groups: servicesMenuGroups,
 }
 
 export const mainNavigation: NavItem[] = [
@@ -52,11 +66,8 @@ export const mainNavigation: NavItem[] = [
 ]
 
 export const footerServices: NavItem[] = [
-  { label: 'Artificial Intelligence', href: '/services#ai' },
-  { label: 'Machine Learning', href: '/services#machine-learning' },
-  { label: 'Robotics', href: '/services#robotics' },
-  { label: 'Software Development', href: '/services#software-development' },
-  { label: 'Cloud Solutions', href: '/services#cloud' },
+  { label: 'IT Services', href: '/services#it-services' },
+  { label: 'ELV Services', href: '/services#building-systems' },
 ]
 
 export const footerCompany: NavItem[] = [

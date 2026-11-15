@@ -46,7 +46,7 @@ export function Footer() {
               <p className="flex items-start gap-3 text-sm leading-6 text-[var(--color-muted-strong)]">
                 <UserRound className="mt-1 h-4 w-4 shrink-0 text-[var(--color-accent)]" aria-hidden="true" />
                 <span>
-                  <span className="mr-1 font-medium text-[var(--color-text)]">CEO:</span>
+                  <span className="mr-1 font-medium text-[var(--color-text)]">Founder:</span>
                   {companyContact.ceo}
                 </span>
               </p>

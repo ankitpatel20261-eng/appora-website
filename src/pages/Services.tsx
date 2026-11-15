@@ -24,8 +24,7 @@ export function Services() {
     <Section ariaLabelledBy="services-page-heading">
       <Container>
         <h1 id="services-page-heading" className="font-display mb-10 text-4xl font-semibold text-[var(--color-text)] md:text-5xl">Our Services</h1>
-        <BuildingServices />
-        <div className="mt-16 border-t border-[var(--color-border)] pt-12">
+        <div id="it-services" className="scroll-mt-28">
           <SectionHeading
             id="digital-services-heading"
             eyebrow={servicesIntro.eyebrow}
@@ -40,6 +39,9 @@ export function Services() {
               </AnimatedElement>
             ))}
           </div>
+        </div>
+        <div className="mt-16 border-t border-[var(--color-border)] pt-12">
+          <BuildingServices />
         </div>
 
         <div className="mt-12 flex flex-col items-start gap-4 rounded-3xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">

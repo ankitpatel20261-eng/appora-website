@@ -9,10 +9,6 @@ interface ServicesMegaMenuProps {
 }
 
 export function ServicesMegaMenu({ id, onNavigate }: ServicesMegaMenuProps) {
-  const midpoint = Math.ceil(servicesMegaMenu.links.length / 2)
-  const leftLinks = servicesMegaMenu.links.slice(0, midpoint)
-  const rightLinks = servicesMegaMenu.links.slice(midpoint)
-
   return (
     <div
       id={id}
@@ -55,10 +51,20 @@ export function ServicesMegaMenu({ id, onNavigate }: ServicesMegaMenuProps) {
               {servicesMegaMenu.linksLabel}
             </p>
 
-            <div className="grid grid-cols-1 gap-x-8 gap-y-1 sm:grid-cols-2">
-              {[leftLinks, rightLinks].map((column, columnIndex) => (
-                <ul key={columnIndex} className="space-y-1">
-                  {column.map((link) => (
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              {servicesMegaMenu.groups.map((group) => (
+                <div key={group.href}>
+                  <Link
+                    to={group.href}
+                    role="menuitem"
+                    onClick={onNavigate}
+                    className="group mb-2 flex items-center justify-between gap-3 rounded-xl border-b border-[var(--color-border)] px-3 py-3 text-base font-semibold text-[var(--color-brand)] transition-colors hover:bg-[var(--color-bg-soft)]"
+                  >
+                    {group.label}
+                    <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+                  </Link>
+                <ul className="space-y-1">
+                  {group.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         to={link.href}
@@ -72,6 +78,7 @@ export function ServicesMegaMenu({ id, onNavigate }: ServicesMegaMenuProps) {
                     </li>
                   ))}
                 </ul>
+                </div>
               ))}
             </div>
 

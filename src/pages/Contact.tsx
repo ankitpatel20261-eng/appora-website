@@ -22,7 +22,7 @@ export function Contact() {
           >
             info@appora.net
           </a>{' '}
-          or connect with our CEO using the details below.
+          or connect with our Founder using the details below.
         </p>
 
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -44,12 +44,12 @@ export function Contact() {
           <article className="group rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 transition duration-200 hover:-translate-y-1 hover:border-[var(--color-border-strong)] hover:shadow-lg focus-within:-translate-y-1 focus-within:border-[var(--color-border-strong)]">
             <h2 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-muted)]">
               <UserRound className="h-4 w-4 text-[var(--color-accent)]" aria-hidden="true" />
-              CEO
+              Founder
             </h2>
             <a
               className="mt-3 inline-block text-base font-medium text-[var(--color-muted-strong)] transition-colors hover:text-[var(--color-accent)] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
               href={`tel:${companyContact.phone}`}
-              aria-label={`Call CEO ${companyContact.ceo}`}
+              aria-label={`Call Founder ${companyContact.ceo}`}
             >
               {companyContact.ceo}
             </a>

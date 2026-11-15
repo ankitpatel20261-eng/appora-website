@@ -10,8 +10,7 @@ export function Services() {
   return (
     <Section id="services" ariaLabelledBy="services-heading" className="border-t border-[var(--color-border)]">
       <Container>
-        <BuildingServices />
-        <div className="mt-16 border-t border-[var(--color-border)] pt-12">
+        <div id="it-services" className="scroll-mt-28">
           <SectionHeading
             id="services-heading"
             eyebrow={servicesIntro.eyebrow}
@@ -30,6 +29,9 @@ export function Services() {
               </AnimatedElement>
             ))}
           </div>
+        </div>
+        <div className="mt-16 border-t border-[var(--color-border)] pt-12">
+          <BuildingServices />
         </div>
       </Container>
     </Section>
